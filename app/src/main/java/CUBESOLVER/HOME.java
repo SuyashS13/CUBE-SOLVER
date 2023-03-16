@@ -7,6 +7,7 @@ package CUBESOLVER;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,766 +16,831 @@ import java.util.Scanner;
  * @author Suyash
  */
 public class HOME extends javax.swing.JFrame {
-        javax.swing.JPanel jp;
+
+    javax.swing.JPanel jp;
 //        String name;
-        int rc =0,yc=0,gc=0,bc=0,oc=0,wc=0;
-        char[] ch  = new char[70];
-     
-        
-        int selected  =0;
-        
-        
+    int rc = 0, yc = 0, gc = 0, bc = 0, oc = 0, wc = 0;
+    char[] ch = new char[70];
+
+    int selected = 0;
+
     /**
      * Creates new form HOME
      */
     public HOME() {
         initComponents();
-           ch[25]='W';
-           ch[15]='B';
-           ch[35]='Y';
-           ch[45]='G';
-           ch[55]='R';
-           ch[65]='O';
+        ch[25] = 'W';
+        ch[15] = 'B';
+        ch[35] = 'Y';
+        ch[45] = 'G';
+        ch[55] = 'R';
+        ch[65] = 'O';
     }
-    public void R(){
-       
-        
-       char temp1,temp2,temp3;
-            temp1= ch[13];
-            temp2=ch[16];
-            temp3 = ch[19];
-          
-          
-       ch[13]= ch[23];
-       ch[16]= ch[26];
-       ch[19]= ch[29];
-      ch[23] = ch[43];
-      ch[26]= ch[46];
-        ch[29]= ch[49];
 
-        ch[43]=ch[33] ;
-        ch[46] =ch[36];
-        ch[49] =ch[39];
-        ch[33]=temp1;
-        ch[36]=temp2;
-        ch[39]=temp3;
+    private void R() {
+
+        char temp1, temp2, temp3;
+        temp1 = ch[13];
+        temp2 = ch[16];
+        temp3 = ch[19];
+
+        ch[13] = ch[23];
+        ch[16] = ch[26];
+        ch[19] = ch[29];
+        ch[23] = ch[43];
+        ch[26] = ch[46];
+        ch[29] = ch[49];
+
+        ch[43] = ch[33];
+        ch[46] = ch[36];
+        ch[49] = ch[39];
+        ch[33] = temp1;
+        ch[36] = temp2;
+        ch[39] = temp3;
 //            System.err.println("in red");
-    temp1= ch[51];
-    temp2= ch[52];
-    temp3= ch[53];
-        
-    ch[51]=ch[57];
-    ch[52]=ch[54];
-    ch[54]=ch[58];
-     ch[58]=ch[56];
-     ch[57]=ch[59];
-     
-    ch[53]=temp1;
-    ch[56]=temp2;
-     ch[59]=temp3;
+        temp1 = ch[51];
+        temp2 = ch[52];
+        temp3 = ch[53];
 
-        
+        ch[51] = ch[57];
+        ch[52] = ch[54];
+        ch[54] = ch[58];
+        ch[58] = ch[56];
+        ch[57] = ch[59];
+
+        ch[53] = temp1;
+        ch[56] = temp2;
+        ch[59] = temp3;
+
     }
-    public void R_Prime(){
-    
-    char temp1,temp2,temp3;
-            temp1= ch[33];
-            temp2=ch[36];
-            temp3 = ch[39]; 
-           ch[33]= ch[43] ;
-        ch[36]=ch[46] ;
-        ch[39]=ch[49] ;ch[43]=ch[23] ;   ch[46]=ch[26];
-         ch[49]=ch[29];
- 
-           ch[23]=ch[13];
-        ch[26]=ch[16];
-        ch[29]=ch[19];
-      ch[13]=temp1;
-        ch[16]=temp2;
-        ch[19]=temp3;
-    ///red
-    temp1= ch[51];
-    temp2= ch[52];
-    temp3= ch[53];
-   char temp4 =ch[56];
-    ch[56]=ch[58];
-     ch[58]=ch[54];
-    ch[54]=ch[52];
+
+    private void R_Prime() {
+
+        char temp1, temp2, temp3;
+        temp1 = ch[33];
+        temp2 = ch[36];
+        temp3 = ch[39];
+        ch[33] = ch[43];
+        ch[36] = ch[46];
+        ch[39] = ch[49];
+        ch[43] = ch[23];
+        ch[46] = ch[26];
+        ch[49] = ch[29];
+
+        ch[23] = ch[13];
+        ch[26] = ch[16];
+        ch[29] = ch[19];
+        ch[13] = temp1;
+        ch[16] = temp2;
+        ch[19] = temp3;
+        ///red
+        temp1 = ch[51];
+        temp2 = ch[52];
+        temp3 = ch[53];
+        char temp4 = ch[56];
+        ch[56] = ch[58];
+        ch[58] = ch[54];
+        ch[54] = ch[52];
 //      ch[53]=temp1;
-    ch[51] = temp3;
-      ch[52]= temp4;
-  ch[53]= ch[59];
+        ch[51] = temp3;
+        ch[52] = temp4;
+        ch[53] = ch[59];
 //    ch[59]=ch[57];
-        ch[59]=ch[57];
-    ch[57]=temp1;
- 
+        ch[59] = ch[57];
+        ch[57] = temp1;
+
 //    ch[56]=temp2;
- 
     }
-    public void L(){
-     char temp1,temp2,temp3;
-            temp1= ch[11];
-            temp2=ch[14];
-            temp3 = ch[17];
-          
-          
-       ch[11]= ch[31];
-       ch[14]= ch[34];
-       ch[17]= ch[37];
-      ch[31] = ch[41];
-      ch[34]= ch[44];
-        ch[37]= ch[47];
 
-        ch[41]=ch[21];
-        ch[44] =ch[24];
-        ch[47] =ch[27];
-        ch[21]=temp1;
-        ch[24]=temp2;
-        ch[27]=temp3;
-    
-       temp1= ch[61];
-    temp2= ch[62];
-    temp3= ch[63];
-        
-    ch[61]=ch[67];
-    ch[62]=ch[64];
-    ch[64]=ch[68];
-     ch[68]=ch[66];
-     ch[67]=ch[69];
-     
-    ch[63]=temp1;
-    ch[66]=temp2;
-     ch[69]=temp3;
+    private void L() {
+        char temp1, temp2, temp3;
+        temp1 = ch[11];
+        temp2 = ch[14];
+        temp3 = ch[17];
+
+        ch[11] = ch[31];
+        ch[14] = ch[34];
+        ch[17] = ch[37];
+        ch[31] = ch[41];
+        ch[34] = ch[44];
+        ch[37] = ch[47];
+
+        ch[41] = ch[21];
+        ch[44] = ch[24];
+        ch[47] = ch[27];
+        ch[21] = temp1;
+        ch[24] = temp2;
+        ch[27] = temp3;
+
+        temp1 = ch[61];
+        temp2 = ch[62];
+        temp3 = ch[63];
+
+        ch[61] = ch[67];
+        ch[62] = ch[64];
+        ch[64] = ch[68];
+        ch[68] = ch[66];
+        ch[67] = ch[69];
+
+        ch[63] = temp1;
+        ch[66] = temp2;
+        ch[69] = temp3;
     }
-    
-    public void L_Prime(){
-         char temp1,temp2,temp3;
 
-            temp1= ch[21];
-            temp2=ch[24];
-            temp3 = ch[27];
-        
-            
-            
-             ch[21]= ch[41];
-        ch[24]=ch[44];
-        ch[27]=ch[47];
-        
-     
-       
-      ch[41]=ch[31] ;
-      ch[44]=ch[34];
-        ch[47]=ch[37];
+    private void L_Prime() {
+        char temp1, temp2, temp3;
 
-    ch[31]=ch[11];
-       ch[34]=ch[14];
-       ch[37]=ch[17];
-       
-       
-        ch[11]=temp1;
-        ch[14]=temp2;
-        ch[17]=temp3;
-        
-           
-         
-         
-    //orange
-    temp1= ch[61];
+        temp1 = ch[21];
+        temp2 = ch[24];
+        temp3 = ch[27];
+
+        ch[21] = ch[41];
+        ch[24] = ch[44];
+        ch[27] = ch[47];
+
+        ch[41] = ch[31];
+        ch[44] = ch[34];
+        ch[47] = ch[37];
+
+        ch[31] = ch[11];
+        ch[34] = ch[14];
+        ch[37] = ch[17];
+
+        ch[11] = temp1;
+        ch[14] = temp2;
+        ch[17] = temp3;
+
+        //orange
+        temp1 = ch[61];
 //    temp2= ch[67];
-    temp3= ch[63];
-   char temp4 =ch[66];
-    ch[66]=ch[68];
-     ch[68]=ch[64];
-    ch[64]=ch[62];
-      ch[62]= temp4;
+        temp3 = ch[63];
+        char temp4 = ch[66];
+        ch[66] = ch[68];
+        ch[68] = ch[64];
+        ch[64] = ch[62];
+        ch[62] = temp4;
 //      ch[53]=temp1;
 
-
-    ch[61] = ch[63];
-     ch[63]= ch[69];
+        ch[61] = ch[63];
+        ch[63] = ch[69];
 //    ch[59]=ch[57];
-        ch[69]=ch[67];
-        ch[67]=temp1;
+        ch[69] = ch[67];
+        ch[67] = temp1;
     }
-    
-     public void U(){
-       
-        
-       char temp1,temp2,temp3;
-            temp1= ch[11];
-            temp2=ch[12];
-            temp3 = ch[13];
-          
-          
-       ch[11]= ch[51];
-       ch[12]= ch[52];
-       ch[13]= ch[53];
-      ch[51] = ch[41];
-      ch[52]= ch[42];
-        ch[53]= ch[43];
 
-        ch[41]=ch[61] ;
-        ch[42] =ch[62];
-        ch[43] =ch[63];
-        ch[61]=temp1;
-        ch[62]=temp2;
-        ch[63]=temp3;
+    private void U() {
+
+        char temp1, temp2, temp3;
+        temp1 = ch[11];
+        temp2 = ch[12];
+        temp3 = ch[13];
+
+        ch[11] = ch[51];
+        ch[12] = ch[52];
+        ch[13] = ch[53];
+        ch[51] = ch[41];
+        ch[52] = ch[42];
+        ch[53] = ch[43];
+
+        ch[41] = ch[61];
+        ch[42] = ch[62];
+        ch[43] = ch[63];
+        ch[61] = temp1;
+        ch[62] = temp2;
+        ch[63] = temp3;
 //            System.err.println("in yellow");
-    temp1= ch[31];
-    temp2= ch[32];
-    temp3= ch[33];
-        
-    ch[31]=ch[37];
-    ch[32]=ch[34];
-    ch[34]=ch[38];
-     ch[38]=ch[36];
-     ch[37]=ch[39];
-     
-    ch[33]=temp1;
-    ch[36]=temp2;
-     ch[39]=temp3;
+        temp1 = ch[31];
+        temp2 = ch[32];
+        temp3 = ch[33];
 
-        
+        ch[31] = ch[37];
+        ch[32] = ch[34];
+        ch[34] = ch[38];
+        ch[38] = ch[36];
+        ch[37] = ch[39];
+
+        ch[33] = temp1;
+        ch[36] = temp2;
+        ch[39] = temp3;
+
     }
-     public void U_Prime(){
-     
-       char temp1,temp2,temp3;
-          temp1= ch[61];
-            temp2=ch[62];
-            temp3 = ch[63];
-            
-            
-           ch[61]=  ch[41] ;
-        ch[62]=ch[42];
-        ch[63]=ch[43];
-        
-            ch[41]=ch[51] ;
-     ch[42]= ch[52];
-       ch[43]= ch[53];
 
-      ch[51]= ch[11];
-      ch[52]= ch[12];
-      ch[53]= ch[13];
-  
-        ch[11]=temp1;
-        ch[12]=temp2;
-        ch[13]=temp3;
-    ///red
-    temp1= ch[31];
-    temp2= ch[32];
-    temp3= ch[33];
-   char temp4 =ch[36];
-    ch[36]=ch[38];
-     ch[38]=ch[34];
-    ch[34]=ch[32];
+    private void U_Prime() {
+
+        char temp1, temp2, temp3;
+        temp1 = ch[61];
+        temp2 = ch[62];
+        temp3 = ch[63];
+
+        ch[61] = ch[41];
+        ch[62] = ch[42];
+        ch[63] = ch[43];
+
+        ch[41] = ch[51];
+        ch[42] = ch[52];
+        ch[43] = ch[53];
+
+        ch[51] = ch[11];
+        ch[52] = ch[12];
+        ch[53] = ch[13];
+
+        ch[11] = temp1;
+        ch[12] = temp2;
+        ch[13] = temp3;
+        ///red
+        temp1 = ch[31];
+        temp2 = ch[32];
+        temp3 = ch[33];
+        char temp4 = ch[36];
+        ch[36] = ch[38];
+        ch[38] = ch[34];
+        ch[34] = ch[32];
 //      ch[53]=temp1;
-    ch[31] = temp3;
-      ch[32]= temp4;
-  ch[33]= ch[39];
+        ch[31] = temp3;
+        ch[32] = temp4;
+        ch[33] = ch[39];
 //    ch[59]=ch[57];
-        ch[39]=ch[37];
-    ch[37]=temp1;
-     }
-     public void Bottom(){
-        char temp1,temp2,temp3;
-          temp1= ch[67];
-            temp2=ch[68];
-            temp3 = ch[69];
-            
-            
-           ch[67]=  ch[47] ;
-        ch[68]=ch[48];
-        ch[69]=ch[49];
-        
-            ch[47]=ch[57] ;
-     ch[48]= ch[58];
-       ch[49]= ch[59];
+        ch[39] = ch[37];
+        ch[37] = temp1;
+    }
 
-      ch[57]= ch[17];
-      ch[58]= ch[18];
-      ch[59]= ch[19];
-  
-        ch[17]=temp1;
-        ch[18]=temp2;
-        ch[19]=temp3;
+    private void Bottom() {
+        char temp1, temp2, temp3;
+        temp1 = ch[67];
+        temp2 = ch[68];
+        temp3 = ch[69];
+
+        ch[67] = ch[47];
+        ch[68] = ch[48];
+        ch[69] = ch[49];
+
+        ch[47] = ch[57];
+        ch[48] = ch[58];
+        ch[49] = ch[59];
+
+        ch[57] = ch[17];
+        ch[58] = ch[18];
+        ch[59] = ch[19];
+
+        ch[17] = temp1;
+        ch[18] = temp2;
+        ch[19] = temp3;
 //                System.err.println("in white");
-    temp1= ch[21];
-    temp2= ch[22];
-    temp3= ch[23];
-        
-    ch[21]=ch[27];
-    ch[22]=ch[24];
-    ch[24]=ch[28];
-     ch[28]=ch[26];
-     ch[27]=ch[29];
-     
-    ch[23]=temp1;
-    ch[26]=temp2;
-     ch[29]=temp3;
-    
-     
-     }
-     public void Bottom_Prime(){
-         char temp1,temp2,temp3;
-               temp1= ch[17];
-            temp2=ch[18];
-            temp3 = ch[19];
-          
-          
-       ch[17]= ch[57];
-       ch[18]= ch[58];
-       ch[19]= ch[59];
-      ch[57] = ch[47];
-      ch[58]= ch[48];
-        ch[59]= ch[49];
+        temp1 = ch[21];
+        temp2 = ch[22];
+        temp3 = ch[23];
 
-        ch[47]=ch[67] ;
-        ch[48] =ch[68];
-        ch[49] =ch[69];
-        ch[67]=temp1;
-        ch[68]=temp2;
-        ch[69]=temp3;
-         
-              ///white
-    temp1= ch[21];
-    temp2= ch[22];
-    temp3= ch[23];
-   char temp4 =ch[26];
-    ch[26]=ch[28];
-     ch[28]=ch[24];
-    ch[24]=ch[22];
-//      ch[53]=temp1;
-    ch[21] = temp3;
-      ch[22]= temp4;
-  ch[23]= ch[29];
-//    ch[59]=ch[57];
-        ch[29]=ch[27];
-    ch[27]=temp1;
-     }
-     public void F(){
-         
-                  char temp1,temp2,temp3;
-                  temp1= ch[63];
-                  temp2= ch[66];
-                  temp3= ch[69];
-                  
-                  ch[63] = ch[21];
-                  ch[66] = ch[22];
-                  ch[69] = ch[23];
-                  
-                  ch[21]= ch[57];
-                  ch[22]= ch[54];
-                  ch[23]= ch[51];
-                  
-                  ch[57] = ch[39];
-                  ch[54] = ch[38];
-                  ch[51] = ch[37];
-                  
-                  ch[39]= temp1;
-                  ch[38]= temp2;
-                  ch[37]= temp3;
-                  
-                  
-                  
+        ch[21] = ch[27];
+        ch[22] = ch[24];
+        ch[24] = ch[28];
+        ch[28] = ch[26];
+        ch[27] = ch[29];
 
-           temp1= ch[11];
-    temp2= ch[12];
-    temp3= ch[13];
-        
-    ch[11]=ch[17];
-    ch[12]=ch[14];
-    ch[14]=ch[18];
-     ch[18]=ch[16];
-     ch[17]=ch[19];
-     
-    ch[13]=temp1;
-    ch[16]=temp2;
-     ch[19]=temp3;
-     }
-     public void F_Prime(){
-         char temp1,temp2,temp3;
-         
-         temp1= ch[63];
-         temp2= ch[66];
-         temp3= ch[69];
-         
-         ch[63]=ch[39];
-         ch[66]=ch[38];
-         ch[69]=ch[37];
-         
-         ch[39] =ch[57];
-         ch[38] =ch[54];
-         ch[37] =ch[51];
-         
-         ch[57]= ch[21];
-         ch[54]= ch[22];
-         ch[51]= ch[23];
-         
-         ch[21] = temp1;
-         ch[22] = temp2;
-         ch[23] = temp3;
-         
-         
-         
-         
-         
-        temp1= ch[11];
-    temp2= ch[12];
-    temp3= ch[13];
-   char temp4 =ch[16];
-    ch[16]=ch[18];
-     ch[18]=ch[14];
-    ch[14]=ch[12];
+        ch[23] = temp1;
+        ch[26] = temp2;
+        ch[29] = temp3;
+
+    }
+
+    private void Bottom_Prime() {
+        char temp1, temp2, temp3;
+        temp1 = ch[17];
+        temp2 = ch[18];
+        temp3 = ch[19];
+
+        ch[17] = ch[57];
+        ch[18] = ch[58];
+        ch[19] = ch[59];
+        ch[57] = ch[47];
+        ch[58] = ch[48];
+        ch[59] = ch[49];
+
+        ch[47] = ch[67];
+        ch[48] = ch[68];
+        ch[49] = ch[69];
+        ch[67] = temp1;
+        ch[68] = temp2;
+        ch[69] = temp3;
+
+        ///white
+        temp1 = ch[21];
+        temp2 = ch[22];
+        temp3 = ch[23];
+        char temp4 = ch[26];
+        ch[26] = ch[28];
+        ch[28] = ch[24];
+        ch[24] = ch[22];
 //      ch[53]=temp1;
-    ch[11] = temp3;
-      ch[12]= temp4;
-  ch[13]= ch[19];
+        ch[21] = temp3;
+        ch[22] = temp4;
+        ch[23] = ch[29];
 //    ch[59]=ch[57];
-        ch[19]=ch[17];
-    ch[17]=temp1;   
-     }
-     public void Back(){
-       char temp1,temp2,temp3;
-         
-         temp1= ch[53];
-         temp2= ch[56];
-         temp3= ch[59];
-         
-         ch[53]=ch[29];
-         ch[56]=ch[28];
-         ch[59]=ch[27];
-         
-         ch[29] =ch[67];
-         ch[28] =ch[64];
-         ch[27] =ch[61];
-         
-         ch[67]= ch[31];
-         ch[64]= ch[32];
-         ch[61]= ch[33];
-         
-         ch[31] = temp1;
-         ch[32] = temp2;
-         ch[33] = temp3;
-         
-        temp1= ch[41];
-    temp2= ch[42];
-    temp3= ch[43];
-        
-    ch[41]=ch[47];
-    ch[42]=ch[44];
-    ch[44]=ch[48];
-     ch[48]=ch[46];
-     ch[47]=ch[49];
-     
-    ch[43]=temp1;
-    ch[46]=temp2;
-     ch[49]=temp3;
-     
-     }
-     public void Back_Prime(){
-      char temp1,temp2,temp3;
-      
-                 temp1= ch[53];
-                  temp2= ch[56];
-                  temp3= ch[59];
-                  
-                  ch[53] = ch[31];
-                  ch[56] = ch[32];
-                  ch[59] = ch[33];
-                  
-                  ch[31]= ch[67];
-                  ch[32]= ch[64];
-                  ch[33]= ch[61];
-                  
-                  ch[67] = ch[29];
-                  ch[64] = ch[28];
-                  ch[61] = ch[27];
-                 
-                  ch[29]= temp1;
-                  ch[28]= temp2;
-                  ch[27]= temp3;
-       temp1= ch[41];
+        ch[29] = ch[27];
+        ch[27] = temp1;
+    }
+
+    private void F() {
+
+        char temp1, temp2, temp3;
+        temp1 = ch[63];
+        temp2 = ch[66];
+        temp3 = ch[69];
+
+        ch[63] = ch[21];
+        ch[66] = ch[22];
+        ch[69] = ch[23];
+
+        ch[21] = ch[57];
+        ch[22] = ch[54];
+        ch[23] = ch[51];
+
+        ch[57] = ch[39];
+        ch[54] = ch[38];
+        ch[51] = ch[37];
+
+        ch[39] = temp1;
+        ch[38] = temp2;
+        ch[37] = temp3;
+
+        temp1 = ch[11];
+        temp2 = ch[12];
+        temp3 = ch[13];
+
+        ch[11] = ch[17];
+        ch[12] = ch[14];
+        ch[14] = ch[18];
+        ch[18] = ch[16];
+        ch[17] = ch[19];
+
+        ch[13] = temp1;
+        ch[16] = temp2;
+        ch[19] = temp3;
+    }
+
+    private void F_Prime() {
+        char temp1, temp2, temp3;
+
+        temp1 = ch[63];
+        temp2 = ch[66];
+        temp3 = ch[69];
+
+        ch[63] = ch[39];
+        ch[66] = ch[38];
+        ch[69] = ch[37];
+
+        ch[39] = ch[57];
+        ch[38] = ch[54];
+        ch[37] = ch[51];
+
+        ch[57] = ch[21];
+        ch[54] = ch[22];
+        ch[51] = ch[23];
+
+        ch[21] = temp1;
+        ch[22] = temp2;
+        ch[23] = temp3;
+
+        temp1 = ch[11];
+        temp2 = ch[12];
+        temp3 = ch[13];
+        char temp4 = ch[16];
+        ch[16] = ch[18];
+        ch[18] = ch[14];
+        ch[14] = ch[12];
+//      ch[53]=temp1;
+        ch[11] = temp3;
+        ch[12] = temp4;
+        ch[13] = ch[19];
+//    ch[59]=ch[57];
+        ch[19] = ch[17];
+        ch[17] = temp1;
+    }
+
+    private void Back() {
+        char temp1, temp2, temp3;
+
+        temp1 = ch[53];
+        temp2 = ch[56];
+        temp3 = ch[59];
+
+        ch[53] = ch[29];
+        ch[56] = ch[28];
+        ch[59] = ch[27];
+
+        ch[29] = ch[67];
+        ch[28] = ch[64];
+        ch[27] = ch[61];
+
+        ch[67] = ch[31];
+        ch[64] = ch[32];
+        ch[61] = ch[33];
+
+        ch[31] = temp1;
+        ch[32] = temp2;
+        ch[33] = temp3;
+
+        temp1 = ch[41];
+        temp2 = ch[42];
+        temp3 = ch[43];
+
+        ch[41] = ch[47];
+        ch[42] = ch[44];
+        ch[44] = ch[48];
+        ch[48] = ch[46];
+        ch[47] = ch[49];
+
+        ch[43] = temp1;
+        ch[46] = temp2;
+        ch[49] = temp3;
+
+    }
+
+    private void Back_Prime() {
+        char temp1, temp2, temp3;
+
+        temp1 = ch[53];
+        temp2 = ch[56];
+        temp3 = ch[59];
+
+        ch[53] = ch[31];
+        ch[56] = ch[32];
+        ch[59] = ch[33];
+
+        ch[31] = ch[67];
+        ch[32] = ch[64];
+        ch[33] = ch[61];
+
+        ch[67] = ch[29];
+        ch[64] = ch[28];
+        ch[61] = ch[27];
+
+        ch[29] = temp1;
+        ch[28] = temp2;
+        ch[27] = temp3;
+        temp1 = ch[41];
 //    temp2= ch[67];
-    temp3= ch[43];
-   char temp4 =ch[46];
-    ch[46]=ch[48];
-     ch[48]=ch[44];
-    ch[44]=ch[42];
-      ch[42]= temp4;
+        temp3 = ch[43];
+        char temp4 = ch[46];
+        ch[46] = ch[48];
+        ch[48] = ch[44];
+        ch[44] = ch[42];
+        ch[42] = temp4;
 //      ch[53]=temp1;
 
-
-    ch[41] = ch[43];
-     ch[43]= ch[49];
+        ch[41] = ch[43];
+        ch[43] = ch[49];
 //    ch[59]=ch[57];
-        ch[49]=ch[47];
-        ch[47]=temp1;
-     }
-     
-     public void M(){
-         char temp1,temp2,temp3;
-         temp1=ch[12];
-         temp2=ch[15];
-         temp3=ch[18];
-         
-         ch[12] =ch[22];
-         ch[15] =ch[25];
-         ch[18] =ch[28];
-         
-         ch[22]=ch[48];
-         ch[25]=ch[45];
-         ch[28]=ch[42];
-         
-         ch[48] = ch[32];
-         ch[45] = ch[35];
-         ch[42] = ch[38];
-         
-         ch[32]=temp1;
-         ch[35]=temp2;
-         ch[38]=temp3;
-     }
-     public void M_Prime(){
-           char temp1,temp2,temp3;
-         temp1=ch[32];
-         temp2=ch[35];
-         temp3=ch[38];
-         
-         
-             ch[32]=ch[48];
-          ch[35]=ch[45];
-          ch[38]=ch[42];
-         
-         
-         
-         ch[48]=ch[22];
-         ch[45]=  ch[25];
-         ch[42]=  ch[28];
-         
-          ch[22]=ch[12] ;
-         ch[25]=ch[15] ;
-         ch[28]=ch[18] ;
-         
-         ch[12]=temp1;
-         ch[15]=temp2;
-         ch[18]=temp3;
-     }
-     
-     public void CM(){
-      char temp1,temp2,temp3;
-      temp1=ch[52];
-      temp2=ch[55];
-      temp3=ch[58];
-      
-      ch[52] = ch[34];
-      ch[55] = ch[35];
-      ch[58] = ch[36];
-      
-      ch[34]= ch[68];
-      ch[35]= ch[65];
-      ch[36]= ch[62];
-      
-       ch[68] = ch[26];     
-       ch[65] = ch[25];     
-       ch[62] = ch[24];
-       
-       ch[26]=temp1;
-       ch[25]=temp2;
-       ch[24]=temp3;
-     
-     
-     }
-     public void White_Align(){
-         int place=11;
-         for(int i=5;i<66;i=i+10){
-             if(ch[i]=='W'){
-                 place = i;
-             }
-             }
-         if(place==15){M_Prime();}
-         if(place==35){M_Prime();M_Prime();}
-         if(place==45){M();}
-         if(place==55){CM();}
-         if(place==65){CM();CM();CM();}
-         
-     }
-     public void YELLOW_White_Plus(){
-           while(ch[34]!='W'&&ch[32]!='W'&&ch[36]!='W'&&ch[38]!='W'){
-         if(ch[25]!='W'){
-         White_Align();}
-       
-         int[] loc= new int[8];
-         int k=0;
-         for(int i=0;i<70;i=i+2){
-             if(ch[i]=='W'){
-                 System.err.println(ch[i]+" "+i);
-                 loc[k]=i;
-                 k++;
-             }
-         }
-        System.err.println("+++++++++++++++++++++++++");
-         for(int i=0;i<k;i++){
-           
-             int j=loc[i];
-             
-         if(j>10&& j<20){
-             if(j%10==2){
-                 
-                     while(ch[38]=='W'){U();}
-                 
-                 F();
-                 F();
-             }
-             else if(j%10==4){
-                 while(ch[34]=='W'){U();}
-             L();
-             L();
-             }
-              else if(j%10==6){
-                  while(ch[36]=='W'){U();}
-             R();
-             R();
-             }
-             
-             else if(j%10==8){
-                 while(ch[28]=='W'){U();}
-             Back();
-             Back();
-             }
-         }
-          if(j>10&& j<20){
-             if(j%10==2){
-                 while(ch[34]=='W'){U();}
-                 F_Prime();
-                 L_Prime();
-                 F();
-             }
-             else if(j%10==4){
-                 while(ch[34]=='W'){U();}
-             L_Prime();
-//             L();
-             }
-              else if(j%10==6){
-//             R();
-            while(ch[36]=='W'){U();}
-             R();
-             }
-             
-             else if(j%10==8){
-//                 Bottom();
-            while(ch[36]=='W'){U();}
+        ch[49] = ch[47];
+        ch[47] = temp1;
+    }
 
-             F_Prime();
-             R();
-             F();
-             }
-            
-          }
-                if(j>50&& j<60){
-             if(j%10==2){
-                 while(ch[38]=='W'){U();}
-                 
-                 R_Prime();
-                 F_Prime();
-                 R();
-             }
-             else if(j%10==4){
-                 while(ch[38]=='W'){U();}
-//             L_Prime();
-//             L();
-                F_Prime();
-             }
-              else if(j%10==6){
-//             R();
-            while(ch[32]=='W'){U();}
-             Back_Prime();
-             }
-             
-             else if(j%10==8){
-//                 Bottom();
-            while(ch[38]=='W'){U();}
-             R();
-             F_Prime();
-             R_Prime();
-             }
-          
-         }
-                
-                
-                
-                
-                 if(j>60&& j<70){
-             if(j%10==2){
-                 while(ch[38]=='W'){U();}
-                 
-//                 R_Prime();
+    private void M() {
+        char temp1, temp2, temp3;
+        temp1 = ch[12];
+        temp2 = ch[15];
+        temp3 = ch[18];
+
+        ch[12] = ch[22];
+        ch[15] = ch[25];
+        ch[18] = ch[28];
+
+        ch[22] = ch[48];
+        ch[25] = ch[45];
+        ch[28] = ch[42];
+
+        ch[48] = ch[32];
+        ch[45] = ch[35];
+        ch[42] = ch[38];
+
+        ch[32] = temp1;
+        ch[35] = temp2;
+        ch[38] = temp3;
+    }
+
+    private void M_Prime() {
+        char temp1, temp2, temp3;
+        temp1 = ch[32];
+        temp2 = ch[35];
+        temp3 = ch[38];
+
+        ch[32] = ch[48];
+        ch[35] = ch[45];
+        ch[38] = ch[42];
+
+        ch[48] = ch[22];
+        ch[45] = ch[25];
+        ch[42] = ch[28];
+
+        ch[22] = ch[12];
+        ch[25] = ch[15];
+        ch[28] = ch[18];
+
+        ch[12] = temp1;
+        ch[15] = temp2;
+        ch[18] = temp3;
+    }
+
+    private void CM() {
+        char temp1, temp2, temp3;
+        temp1 = ch[52];
+        temp2 = ch[55];
+        temp3 = ch[58];
+
+        ch[52] = ch[34];
+        ch[55] = ch[35];
+        ch[58] = ch[36];
+
+        ch[34] = ch[68];
+        ch[35] = ch[65];
+        ch[36] = ch[62];
+
+        ch[68] = ch[26];
+        ch[65] = ch[25];
+        ch[62] = ch[24];
+
+        ch[26] = temp1;
+        ch[25] = temp2;
+        ch[24] = temp3;
+
+    }
+
+    private void White_Align() {
+        int place = 11;
+        for (int i = 5; i < 66; i = i + 10) {
+            if (ch[i] == 'W') {
+                place = i;
+            }
+        }
+        if (place == 15) {
+            M_Prime();
+        }
+        if (place == 35) {
+            M_Prime();
+            M_Prime();
+        }
+        if (place == 45) {
+            M();
+        }
+        if (place == 55) {
+            CM();
+        }
+        if (place == 65) {
+            CM();
+            CM();
+            CM();
+        }
+
+    }
+    
+    
+     private void Blue_Align() {
+        int place = 1;
+        for (int i = 5; i < 66; i = i + 10) {
+            if (ch[i] == 'B') {
+                place = i;
+            }
+        }
+        if (place == 25) {
+            M();
+        }
+        if (place == 35) {
+//            M();
+            M_Prime();
+        }
+        if (place == 45) {
+            M(); M();
+        }
+        if (place == 55) {
+            CM();
+            CM();
+            CM();
+            M_Prime();
+        }
+        if (place == 65) {
+            CM();
+//            CM();
+//            CM();
+  M_Prime();
+        }
+
+    }
+
+   private void YELLOW_White_Plus() {
+
+        if (ch[25] != 'W') {
+            White_Align();
+        }
+
+        int[] loc = new int[8];
+        int k = 0;
+        for (int i = 0; i < 70; i = i + 2) {
+            if (ch[i] == 'W') {
+                System.err.println(ch[i] + " " + i);
+                loc[k] = i;
+                k++;
+            }
+        }
+
+        System.err.println("+++++++++++++++++++++++++");
+        for (int i = 0; i < k; i++) {
+
+            int j = loc[i];
+
+            if (j > 20 && j < 30) {
+                if (j % 10 == 2) {
+
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+
+                    F();
+                    F();
+                } else if (j % 10 == 4) {
+                    while (ch[34] == 'W') {
+                        U();
+                    }
                     L();
-                 F();
-                 L_Prime();
-             }
-             else if(j%10==4){
-                 while(ch[32]=='W'){U();}
-//             L_Prime();
+                    L();
+                } else if (j % 10 == 6) {
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+                    R();
+                    R();
+                } else if (j % 10 == 8) {
+                    while (ch[28] == 'W') {
+                        U();
+                    }
+                    Back();
+                    Back();
+                }
+            }
+            if (j > 10 && j < 20) {
+                if (j % 10 == 2) {
+                    while (ch[34] == 'W') {
+                        U();
+                    }
+                    F_Prime();
+                    L_Prime();
+                    F();
+                } else if (j % 10 == 4) {
+                    while (ch[34] == 'W') {
+                        U();
+                    }
+                    L_Prime();
 //             L();
-                Back_Prime();
-             }
-              else if(j%10==6){
-                  while(ch[38]=='W'){U();}
+                } else if (j % 10 == 6) {
 //             R();
-             F();
-             }
-             
-             else if(j%10==8){
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+                    R();
+                } else if (j % 10 == 8) {
 //                 Bottom();
-             while(ch[38]=='W'){U();}
-             L_Prime();
-             F();
-             L();
-             }
-          
-         }
-                 
-                 
-                
-                  if(j>40&& j<50){
-             if(j%10==2){
-                 while(ch[36]=='W'){U();}
-                 Back();
-             L_Prime();
-Back_Prime(); 
-//                 Back_Prime();
-//                 R();
-             }
-             else if(j%10==4){
-//             L_Prime();
-while(ch[36]=='W'){U();}
-//             L();
-                R_Prime()
-                        ;
-             }
-              else if(j%10==6){
-//             R();
-while(ch[34]=='W'){U();}
-L();
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+
+                    F_Prime();
+                    R();
+                    F();
+                }
 
             }
-             
-             else if(j%10==8){
+            if (j > 50 && j < 60) {
+                if (j % 10 == 2) {
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+
+                    R_Prime();
+                    F_Prime();
+                    R();
+                } else if (j % 10 == 4) {
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+//             L_Prime();
+//             L();
+                    F_Prime();
+                } else if (j % 10 == 6) {
+//             R();
+                    while (ch[32] == 'W') {
+                        U();
+                    }
+                    Back_Prime();
+                } else if (j % 10 == 8) {
 //                 Bottom();
-while(ch[36]=='W'){U();}
-             Back();
-             R_Prime();
-             Back_Prime();
-             }
-          
-         }
-             }
-         }
-     
-     }
-     public void Solve(){
-         YELLOW_White_Plus();
-         
-     }
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+                    R();
+                    F_Prime();
+                    R_Prime();
+                }
+
+            }
+
+            if (j > 60 && j < 70) {
+                if (j % 10 == 2) {
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+
+//                 R_Prime();
+                    L();
+                    F();
+                    L_Prime();
+                } else if (j % 10 == 4) {
+                    while (ch[32] == 'W') {
+                        U();
+                    }
+//             L_Prime();
+//             L();
+                    Back_Prime();
+                } else if (j % 10 == 6) {
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+//             R();
+                    F();
+                } else if (j % 10 == 8) {
+//                 Bottom();
+                    while (ch[38] == 'W') {
+                        U();
+                    }
+                    L_Prime();
+                    F();
+                    L();
+                }
+
+            }
+
+            if (j > 40 && j < 50) {
+                if (j % 10 == 2) {
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+                    Back();
+                    L_Prime();
+                    Back_Prime();
+//                 Back_Prime();
+//                 R();
+                } else if (j % 10 == 4) {
+//             L_Prime();
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+//             L();
+                    R_Prime();
+                } else if (j % 10 == 6) {
+//             R();
+                    while (ch[34] == 'W') {
+                        U();
+                    }
+                    L();
+
+                } else if (j % 10 == 8) {
+//                 Bottom();
+                    while (ch[36] == 'W') {
+                        U();
+                    }
+                    Back();
+                    R_Prime();
+                    Back_Prime();
+                }
+//            }
+//            }
+
+            }
+
+        }
+    }
+
+   private void White_Plus(){
+   
+       while(ch[12]!='B'){
+           U();    
+   }
+       F();
+       F();
+   
+   }
+    public void Solve() {
+        if (ch[25] != 'W') {
+            White_Align();
+        }
+         if (ch[15] != 'B') {
+            Blue_Align();
+        }
+//        for (int a = 0; a < 10; a++) {
+            YELLOW_White_Plus();
+//        }
+
+            if(ch[32]=='W'&&ch[34]=='W'&&ch[36]=='W'&&ch[38]=='W'){
+                White_Plus();
+    }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -2537,411 +2603,398 @@ while(ch[36]=='W'){U();}
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(rc<10){
-         rc++;
+        if (rc < 10) {
+            rc++;
 //           String panelName = jp.toString();
 //            System.err.println(panelName+"-----------------------------");
 //           String numbers = panelName.replaceAll("[^\\d]", "");
 //           int num = Integer.parseInt(numbers);
-           ch[selected] = 'R';
+            ch[selected] = 'R';
 
-          jp.setBackground(new java.awt.Color(255, 0, 0));
-          jp.setBorder(null);
-                 }
-        
+            jp.setBackground(new java.awt.Color(255, 0, 0));
+            jp.setBorder(null);
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) { 
-  // TODO add your handling code here:
-  jp = jPanel11;
-  selected = 11 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
+    private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel11;
+        selected = 11;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel12MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel12;
+        selected = 12;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel13MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel13;
+        selected = 13;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel14MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel14;
+        selected = 14;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel15;
+        selected = 15;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel16MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel16;
+        selected = 16;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel17;
+        selected = 17;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel18;
+        selected = 18;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel19MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel19;
+        selected = 19;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel21MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel21;
+        selected = 21;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel22MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel22;
+        selected = 22;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel23MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel23;
+        selected = 23;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel24MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel24;
+        selected = 24;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel25MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel25;
+        selected = 25;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel26MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel26;
+        selected = 26;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel27;
+        selected = 27;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel28;
+        selected = 28;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel29;
+        selected = 29;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel31;
+        selected = 31;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel32;
+        selected = 32;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel33;
+        selected = 33;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel34;
+        selected = 34;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel35MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel35;
+        selected = 35;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel36MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel36;
+        selected = 36;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel37MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel37;
+        selected = 37;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel38MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel38;
+        selected = 38;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel39MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel39;
+        selected = 39;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel41MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel41;
+        selected = 41;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel42MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel42;
+        selected = 42;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel43MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel43;
+        selected = 43;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel44MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel44;
+        selected = 44;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel45MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel45;
+        selected = 45;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel46MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel46;
+        selected = 46;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel47MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel47;
+        selected = 47;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel48MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel48;
+        selected = 48;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel49MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel49;
+        selected = 49;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel51MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel51;
+        selected = 51;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel52MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel52;
+        selected = 52;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel53MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel53;
+        selected = 53;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel54MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel54;
+        selected = 54;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel55MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel55;
+        selected = 55;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel56MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel56;
+        selected = 56;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel57MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel57;
+        selected = 57;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel58MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel58;
+        selected = 58;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel59MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel59;
+        selected = 59;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel61MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel61;
+        selected = 61;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel62MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel62;
+        selected = 62;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel63MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel63;
+        selected = 63;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel64MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel64;
+        selected = 64;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel65MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel65;
+        selected = 65;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel66MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel66;
+        selected = 66;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel67MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel67;
+        selected = 67;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel68MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel68;
+        selected = 68;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
+
+    private void jPanel69MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        jp = jPanel69;
+        selected = 69;
+        jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+    }
 
-
-private void jPanel12MouseClicked(java.awt.event.MouseEvent evt) { 
-  // TODO add your handling code here:
-  jp = jPanel12;
-  selected = 12 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel13MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel13;
-  selected = 13 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel14MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel14;
-  selected = 14 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel15;
-  selected = 15 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel16MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel16;
-  selected = 16 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel17;
-  selected = 17 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel18;
-  selected = 18 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel19MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel19;
-  selected = 19 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel21MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel21;
-  selected = 21 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel22MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel22;
-  selected = 22 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel23MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel23;
-  selected = 23 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel24MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel24;
-  selected = 24 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel25MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel25;
-  selected = 25 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel26MouseClicked(java.awt.event.MouseEvent evt) { 
-  // TODO add your handling code here:
-  jp = jPanel26;
-  selected = 26 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel27;
-  selected = 27 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel28;
-  selected = 28 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel29;
-  selected = 29 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel31;
-  selected = 31 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel32;
-  selected = 32 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel33;
-  selected = 33 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel34;
-  selected = 34 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel35MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel35;
-  selected = 35 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel36MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel36;
-  selected = 36 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel37MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel37;
-  selected = 37 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel38MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel38;
-  selected = 38 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel39MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel39;
-  selected = 39 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel41MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel41;
-  selected = 41 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel42MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel42;
-  selected = 42 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel43MouseClicked(java.awt.event.MouseEvent evt) { 
-  // TODO add your handling code here:
-  jp = jPanel43;
-  selected = 43 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel44MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel44;
-  selected = 44 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel45MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel45;
-  selected = 45 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel46MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel46;
-  selected = 46 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel47MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel47;
-  selected = 47 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel48MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel48;
-  selected = 48 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel49MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel49;
-  selected = 49 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel51MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel51;
-  selected = 51 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel52MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel52;
-  selected = 52 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel53MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel53;
-  selected = 53 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel54MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel54;
-  selected = 54 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel55MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel55;
-  selected = 55 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel56MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel56;
-  selected = 56 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel57MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel57;
-  selected = 57 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel58MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel58;
-  selected = 58 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel59MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel59;
-  selected = 59 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel61MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel61;
-  selected = 61 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel62MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel62;
-  selected = 62 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel63MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel63;
-  selected = 63 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel64MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel64;
-  selected = 64 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel65MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel65;
-  selected = 65 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel66MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel66;
-  selected = 66 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel67MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel67;
-  selected = 67 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel68MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel68;
-  selected = 68 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-
-
-private void jPanel69MouseClicked(java.awt.event.MouseEvent evt) {
-  // TODO add your handling code here:
-  jp = jPanel69;
-  selected = 69 ;
-jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /*
     
     
@@ -3071,11 +3124,7 @@ jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.aw
     }//GEN-LAST:event_jPanel68MouseClicked
 
     */
-    
-  
-
-    
-/*    
+ /*    
     
     
     
@@ -3189,121 +3238,129 @@ jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.aw
 */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-          if(bc<10){
-        bc++;
-       
-         ch[selected] = 'B';
-      jp.setBackground(new java.awt.Color(0, 0, 255));
-        jp.setBorder(null);}
-             
+        if (bc < 10) {
+            bc++;
+
+            ch[selected] = 'B';
+            jp.setBackground(new java.awt.Color(0, 0, 255));
+            jp.setBorder(null);
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        
-          if(gc<10){
-        gc++;
-        
-         ch[selected] = 'G';
-      jp.setBackground(new java.awt.Color(0, 255, 0));
-        jp.setBorder(null);}
-             
+
+        if (gc < 10) {
+            gc++;
+
+            ch[selected] = 'G';
+            jp.setBackground(new java.awt.Color(0, 255, 0));
+            jp.setBorder(null);
+        }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-           if(wc<10){
-        wc++;
+        if (wc < 10) {
+            wc++;
 //         String panelName = jp.getName();
 //         String numbers = panelName.replaceAll("[^\\d]", "");
 //         int num = Integer.parseInt(numbers);
-         ch[selected] = 'W';
-      jp.setBackground(new java.awt.Color(255, 255, 255));
-        jp.setBorder(null);}
+            ch[selected] = 'W';
+            jp.setBackground(new java.awt.Color(255, 255, 255));
+            jp.setBorder(null);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-           if(oc<10){
-        oc++;
+        if (oc < 10) {
+            oc++;
 //         String panelName = jp.getName();
 //         String numbers = panelName.replaceAll("[^\\d]", "");
 //         int num = Integer.parseInt(numbers);
-         ch[selected] = 'O';
-      jp.setBackground(new java.awt.Color(255, 140, 0));
-        jp.setBorder(null);}
+            ch[selected] = 'O';
+            jp.setBackground(new java.awt.Color(255, 140, 0));
+            jp.setBorder(null);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-           if(yc<10){
-        yc++;
-       
-         ch[selected] = 'Y';
-      jp.setBackground(new java.awt.Color(255, 255, 0));
-        jp.setBorder(null);}
+        if (yc < 10) {
+            yc++;
+
+            ch[selected] = 'Y';
+            jp.setBackground(new java.awt.Color(255, 255, 0));
+            jp.setBorder(null);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-          Solve();
-        for(int i=0;i<69;i++){
-     
-        int num =1;
+        try{
+        Solve();}
+        catch(Exception e){e.printStackTrace();}
+        for (int i = 0; i < 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
 //         for(int i=0;i<69;i++){
 //                            System.err.println(i+" "+ch[i]);
 //                              
@@ -3312,46 +3369,49 @@ jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.aw
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-                javax.swing.JPanel parent =blue;
+        javax.swing.JPanel parent = blue;
 
-                
-                        for(int i=0;i<9;i++){
-                            ch[i+10+1]='B';
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                               f.setBackground(new java.awt.Color(0, 0, 255));
-                              
-                        }
-                          for(int i=0;i<9;i++){
-                               ch[i+50+1]='R';
-                              parent =red;
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                                 f.setBackground(new java.awt.Color(255, 0, 0));
-                              
-                        }  for(int i=0;i<9;i++){
-                            parent = green;
-                             ch[i+40+1]='G';
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                              f.setBackground(new java.awt.Color(0, 255, 0));
-                              
-                        }  for(int i=0;i<9;i++){
-                            parent = white;
-                             ch[i+20+1]='W';
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                               f.setBackground(new java.awt.Color(255, 255, 255));
-                              
-                        }  for(int i=0;i<9;i++){
-                            parent = orange;
-                             ch[i+60+1]='O';
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                                f.setBackground(new java.awt.Color(255, 140, 0));
-                              
-                        }  for(int i=0;i<9;i++){
-                            parent = yellow;
-                             ch[i+30+1]='Y';
-                              javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(i);
-                                f.setBackground(new java.awt.Color(255, 255, 0));
-                              
-                        }
+        for (int i = 0; i < 9; i++) {
+            ch[i + 10 + 1] = 'B';
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(0, 0, 255));
+
+        }
+        for (int i = 0; i < 9; i++) {
+            ch[i + 50 + 1] = 'R';
+            parent = red;
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(255, 0, 0));
+
+        }
+        for (int i = 0; i < 9; i++) {
+            parent = green;
+            ch[i + 40 + 1] = 'G';
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(0, 255, 0));
+
+        }
+        for (int i = 0; i < 9; i++) {
+            parent = white;
+            ch[i + 20 + 1] = 'W';
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(255, 255, 255));
+
+        }
+        for (int i = 0; i < 9; i++) {
+            parent = orange;
+            ch[i + 60 + 1] = 'O';
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(255, 140, 0));
+
+        }
+        for (int i = 0; i < 9; i++) {
+            parent = yellow;
+            ch[i + 30 + 1] = 'Y';
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(i);
+            f.setBackground(new java.awt.Color(255, 255, 0));
+
+        }
 //                    for(int i=0;i<69;i++){
 //                            System.err.println(i+" "+ch[i]);
 //                              
@@ -3361,1054 +3421,1092 @@ jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.aw
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         R();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
-        
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         R_Prime();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
-        
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
+
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         L();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
-        
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         L_Prime();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
-        
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
+
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
 
         // TODO add your handling code here:
         U();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         U_Prime();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
         Bottom();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-        Bottom_Prime();  for(int i=0;i<=69;i++){
-     
-        int num =1;
+        Bottom_Prime();
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
         F();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
         F_Prime();
-         for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
         Back_Prime();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
         Back();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
         M();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
         M_Prime();
-          for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
-        
-      char[] colors = {'O', 'R', 'Y', 'G', 'W', 'B'};
-//      methods[] m = {R()}
-        ArrayList<Character> colorList = new ArrayList<>();
-        ArrayList<Character> col = new ArrayList<>();
-        for (char c : colors) {
-            for (int i = 0; i < 8; i++) {
-                colorList.add(c);
-            }
+
+        List<Runnable> methods = new ArrayList<Runnable>();
+        for (int i = 0; i < 100; i++) {
+            methods.add(() -> {
+                this.R();
+            });
+            methods.add(() -> {
+                this.R_Prime();
+            });
+            methods.add(() -> {
+                this.L();
+            });
+            methods.add(() -> {
+                this.L_Prime();
+            });
+            methods.add(() -> {
+                this.U();
+            });
+            methods.add(() -> {
+                this.U_Prime();
+            });
+            methods.add(() -> {
+                this.Back();
+            });
+            methods.add(() -> {
+                this.Back_Prime();
+            });
+            methods.add(() -> {
+                this.Bottom();
+            });
+            methods.add(() -> {
+                this.Bottom_Prime();
+            });
+            methods.add(() -> {
+                this.F();
+            });
+
+            methods.add(() -> {
+                this.F_Prime();
+            });
+
+            methods.add(() -> {
+                this.M();
+            });
+            methods.add(() -> {
+                this.M_Prime();
+            });
+            methods.add(() -> {
+                this.CM();
+            });
+
         }
-        
-          for (char c : colors) {
-          
-                col.add(c);
-            
+
+        Collections.shuffle(methods);
+
+        for (Runnable method : methods) {
+            method.run();
         }
-        Collections.shuffle(colorList);
-        Collections.shuffle(col);
-        int l=0;
-        for (int i = 15; i < 67; i=i+10) {
-//            if()
-             ch[i]=col.get(l);
-             l++;
-         }
-       char[] randomArray = new char[48];
-  
-//        System.out.println(randomArray);
-         for (int i = 0; i < 48; i++) {
-//            if()
-              randomArray[i]=colorList.get(i);
-         }
-         int k=0;
-         for(int i=11;i<=69;i++){
-         if(i%10==0){continue;}
-         if(i%10==5){continue;}
-         ch[i]=randomArray[k];
-         k++;
-         }
-         
+
 //        char[] ar = new char[54];
 //        for (int i = 0; i <54; i++) {
 //            char x= ar[i];
 //           
 //            
 //        }
-             for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
 
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
         CM();
-           for (int i = 0; i < 69; i++) {
+        for (int i = 0; i < 69; i++) {
 //            if()
 //              randomArray[i];
-         }
+        }
 //        char[] ar = new char[54];
 //        for (int i = 0; i <54; i++) {
 //            char x= ar[i];
 //           
 //            
 //        }
-             for(int i=0;i<=69;i++){
-     
-        int num =1;
+        for (int i = 0; i <= 69; i++) {
+
+            int num = 1;
 //        String ss = "jPanel"+i;
-        javax.swing.JPanel parent =blue;
-        if (i >= 11 && i <= 19) {
-       parent =blue;
-       num = i-10;
-    } else if (i >= 21 && i <= 29) {
-       parent =white;
-        num = i-20;
-    } else if (i >= 31 && i <= 39) {
-       parent =yellow;
-        num = i-30;
-    } else if (i >= 41 && i <= 49) {
-       
-         parent =green;
-         num = i-40;
-    } else if (i >= 51 && i <= 59) {
-        parent =red;
-         num = i-50;
-    } else if (i >= 61 && i <= 69) {
-        parent =orange;
-         num = i-60;
-    }
+            javax.swing.JPanel parent = blue;
+            if (i >= 11 && i <= 19) {
+                parent = blue;
+                num = i - 10;
+            } else if (i >= 21 && i <= 29) {
+                parent = white;
+                num = i - 20;
+            } else if (i >= 31 && i <= 39) {
+                parent = yellow;
+                num = i - 30;
+            } else if (i >= 41 && i <= 49) {
+
+                parent = green;
+                num = i - 40;
+            } else if (i >= 51 && i <= 59) {
+                parent = red;
+                num = i - 50;
+            } else if (i >= 61 && i <= 69) {
+                parent = orange;
+                num = i - 60;
+            }
 //        javax.swing.JPanel f = null;
 //         if(num>=0&&num <9)
-          javax.swing.JPanel  f = (javax.swing.JPanel)parent.getComponent(num-1);
+            javax.swing.JPanel f = (javax.swing.JPanel) parent.getComponent(num - 1);
 //            System.err.println(ch[num]);
 //          f.setName(ss);
-          
-        switch(ch[i]){
-            case 'R': 
-                 f.setBackground(new java.awt.Color(255, 0, 0));
-                break;
-                
-            case 'G':
-              f.setBackground(new java.awt.Color(0, 255, 0));
-                break;
-                
-            case'B': 
-               f.setBackground(new java.awt.Color(0, 0, 255));
-                break;
-                
-                 case 'Y': 
-                  f.setBackground(new java.awt.Color(255, 255, 0));
-                     
-                break;
-                
-            case 'O':
-                f.setBackground(new java.awt.Color(255, 140, 0));
-                break;
-                
-            case'W': 
-              f.setBackground(new java.awt.Color(255, 255, 255));
-                break;
-        }}
+
+            switch (ch[i]) {
+                case 'R':
+                    f.setBackground(new java.awt.Color(255, 0, 0));
+                    break;
+
+                case 'G':
+                    f.setBackground(new java.awt.Color(0, 255, 0));
+                    break;
+
+                case 'B':
+                    f.setBackground(new java.awt.Color(0, 0, 255));
+                    break;
+
+                case 'Y':
+                    f.setBackground(new java.awt.Color(255, 255, 0));
+
+                    break;
+
+                case 'O':
+                    f.setBackground(new java.awt.Color(255, 140, 0));
+                    break;
+
+                case 'W':
+                    f.setBackground(new java.awt.Color(255, 255, 255));
+                    break;
+            }
+        }
     }//GEN-LAST:event_jButton24ActionPerformed
 //****************************************
+
     /*
     
     private void jPanel97MouseClicked(java.awt.event.MouseEvent evt) { 
@@ -4490,8 +4588,7 @@ private void jPanel112MouseClicked(java.awt.event.MouseEvent evt) {
   // TODO add your handling code here:
   jp = jPanel112;
 jp.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));}
-    */
-    
+     */
     /**
      * @param args the command line arguments
      */
